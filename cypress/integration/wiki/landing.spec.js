@@ -29,13 +29,11 @@ describe('wiki test', () => {
     it('display main page navigation component', () => {
         //verify left navigation is visible
         cy.get('#p-navigation').should('be.visible')
-        // expect(country).to.deep.equal({ name: 'United States' })
     })
 
     mainNavFix.forEach((mainNav) => {
       it(`main navigation has link to ${mainNav}`, () => {
         cy.get('#p-navigation').contains(mainNav)
-        // cy.wrap(color).should('be.oneOf', rainbow)
       })
     })
 
@@ -47,7 +45,6 @@ describe('wiki test', () => {
     contriNavFix.forEach((contriNav) => {
       it(`main navigation has link to ${contriNav}`, () => {
         cy.get('#p-interaction').contains(contriNav)
-        // cy.wrap(color).should('be.oneOf', rainbow)
       })
     })
 
