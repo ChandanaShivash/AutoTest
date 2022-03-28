@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "delete:reports": "rm -rf cypress/results/ || true",
-    "test": "npm run delete:reports || true && npx cypress run --reporter mochawesome"
+    "delete:videos": "rm -rf cypress/videos/ || true",
+    "test": "npm run delete:reports || true && npm run delete:videos || true && npx cypress run --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
